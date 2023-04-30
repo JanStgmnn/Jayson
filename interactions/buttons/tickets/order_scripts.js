@@ -16,10 +16,10 @@ const {
 const Schema = require("../../../models/tickets.js");
 
 /**
- * @type {import('../../../typings').ButtonInteractionCommand}
+ * @type {import('../../../typings.js').ButtonInteractionCommand}
  */
 module.exports = {
-	id: "order_discord",
+	id: "order_scripts",
 
 	async execute(interaction) {
 		const data = await Schema.findOne({
@@ -35,7 +35,7 @@ module.exports = {
 		const channel = await interaction.guild.channels.create({
 			name: "📝│" + interaction.user.username,
 			type: ChannelType.GuildText,
-			parent: "1101996612420636754",
+			parent: "1101996753307324537",
 			permissionOverwrites: [
 				{
 					id: interaction.guild.id,
@@ -52,7 +52,7 @@ module.exports = {
 			UserID: interaction.user.id,
 			ChannelID: channel.id,
 			Type: "Discord",
-			CategoryID: "1101996612420636754",
+			CategoryID: "1101996753307324537",
 			PaymentType: "None",
 			Amount: 0,
 			Approval: false,
@@ -64,7 +64,7 @@ module.exports = {
 			.setDescription(
 				"Hello <@!" +
 					interaction.user.id +
-					">\nI will be with you shortly. In the meantime, please describe which features your Discord Bot should include, your deadline and other useful information!\n\nIncase you want to close the ticket, please  use the button down below!"
+					">\nI will be with you shortly. In the meantime, please describe which features your Scripts should include, your deadline and other useful information!\n\nIncase you want to close the ticket, please  use the button down below!"
 			)
 			.setColor(2292922)
 			.setFooter({

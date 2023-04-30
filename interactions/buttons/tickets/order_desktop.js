@@ -16,7 +16,7 @@ const {
 const Schema = require("../../../models/tickets.js");
 
 /**
- * @type {import('../../../typings').ButtonInteractionCommand}
+ * @type {import('../../../typings.js').ButtonInteractionCommand}
  */
 module.exports = {
 	id: "order_desktop",

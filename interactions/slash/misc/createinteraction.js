@@ -28,6 +28,7 @@ module.exports = {
 			option
 				.setName("interaction")
 				.setDescription("The specific interaction to spawn.")
+				.setRequired(true)
 		)
 		.setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 

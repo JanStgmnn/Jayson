@@ -1,28 +1,39 @@
 /**
- * @file Sample button interaction
+ * @file Sample help command with slash command.
  * @author Jan Stegemann
  * @since 3.0.0
- * @version 3.2.2
+ * @version 1.0.0
  */
+
+// Deconstructed the constants we need in this file.
 
 const {
 	EmbedBuilder,
+	SlashCommandBuilder,
 	ActionRowBuilder,
 	ButtonBuilder,
 	PermissionFlagsBits,
-	ChannelType,
-	ButtonStyle,
 } = require("discord.js");
+
 const Schema = require("../../../models/tickets.js");
 const transcript = require("discord-html-transcripts");
 
 /**
- * @type {import('../../../typings').ButtonInteractionCommand}
+ * @type {import('../../../typings.js').SlashInteractionCommand}
  */
 module.exports = {
-	id: "close",
+	// The data needed to register slash commands to Discord.
+
+	data: new SlashCommandBuilder()
+		.setName("close")
+		.setDescription("Close a ticket"),
 
 	async execute(interaction) {
+		/**
+		 * @type {string}
+		 * @description The "command" argument
+		 */
+
 		const data = await Schema.findOne({
 			ChannelID: interaction.channel.id,
 		});

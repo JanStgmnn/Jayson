@@ -13,19 +13,12 @@ const {
 	ActionRowBuilder,
 	ButtonBuilder,
 	PermissionFlagsBits,
-	TextInputStyle,
-	TextInputBuilder,
-	BaseSelectMenuBuilder,
-	StringSelectMenuBuilder,
-	StringSelectMenuOptionBuilder,
-	ModalBuilder,
-	ButtonStyle,
 } = require("discord.js");
 
 const Schema = require("../../../models/tickets.js");
 
 /**
- * @type {import('../../../typings').SlashInteractionCommand}
+ * @type {import('../../../typings.js').SlashInteractionCommand}
  */
 module.exports = {
 	// The data needed to register slash commands to Discord.
@@ -66,7 +59,7 @@ module.exports = {
 			.setDescription(
 				"Your payment total is: `" +
 					amount +
-					"€`\n\nPlease choose which payment method you would like to use."
+					"€`\n\nPlease choose which payment method you would like to use.\n\n**Note:** Revolut supports Credit Card, Apple Pay and Google Pay."
 			)
 			.setFooter({
 				text: "crazii Solutions",
@@ -97,8 +90,6 @@ module.exports = {
 		]);
 
 		await interaction.channel.send({ embeds: [embed], components: [row] });
-
-		//TODO: add paypal information flow, etc. etc.
 
 		interaction.reply({
 			content: "Sent the payment embed.",
