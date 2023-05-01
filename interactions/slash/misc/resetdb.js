@@ -15,7 +15,8 @@ const {
 	PermissionFlagsBits,
 } = require("discord.js");
 
-const Schema = require("../../../models/tickets.js");
+const Schema = require("../../../models/tournament.js");
+const player = require("../../../models/player.js");
 
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
@@ -33,6 +34,7 @@ module.exports = {
 		 * @description The "command" argument
 		 */
 
-		await Schema.findOneAndDelete({ UserID: interaction.user.id });
+		const data = await Schema.findOneAndDelete();
+		await player.deleteMany();
 	},
 };
