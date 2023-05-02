@@ -15,7 +15,7 @@ const {
 	PermissionFlagsBits,
 } = require("discord.js");
 
-const Schema = require("../../../models/verification.js");
+const Schema = require("../../../models/tickets.js");
 
 /**
  * @type {import('../../../typings').SlashInteractionCommand}
