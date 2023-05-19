@@ -76,17 +76,17 @@ module.exports = {
 				.setCustomId("paypal")
 				.setLabel("PayPal")
 				.setStyle("3")
-				.setEmoji("<:paypal:831885629259644980>"),
+				.setEmoji("<:paypal:1109173824420851753>"),
 			new ButtonBuilder()
 				.setCustomId("revolut")
 				.setLabel("Revolut")
 				.setStyle("3")
-				.setEmoji("<:revolut:873224581261979688>"),
+				.setEmoji("<:revolut:1109173814035759125>"),
 			new ButtonBuilder()
 				.setCustomId("crypto")
 				.setLabel("Crypto")
 				.setStyle("3")
-				.setEmoji("<:crypto:854127037572448296>"),
+				.setEmoji("<:crypto:1109173891768791112>"),
 		]);
 
 		await interaction.channel.send({ embeds: [embed], components: [row] });

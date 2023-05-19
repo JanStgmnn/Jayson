@@ -60,7 +60,7 @@ module.exports = {
 
 		const row = new ActionRowBuilder().addComponents(
 			new ButtonBuilder()
-				.setEmoji("<:paypal:831885629259644980>")
+				.setEmoji("<:paypal:1109173824420851753>")
 				.setLabel("Pay")
 				.setStyle(ButtonStyle.Link)
 				.setURL("https://paypal.me/janlinusstegemann")

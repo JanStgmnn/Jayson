@@ -60,7 +60,7 @@ module.exports = {
 
 		const row = new ActionRowBuilder().addComponents(
 			new ButtonBuilder()
-				.setEmoji("<:revolut:873224581261979688>")
+				.setEmoji("<:revolut:1109173814035759125>")
 				.setLabel("Pay")
 				.setStyle(ButtonStyle.Link)
 				.setURL("https://revolut.me/crazii")
